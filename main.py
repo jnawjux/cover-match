@@ -6,7 +6,7 @@ my_files = os.listdir(path)
 # cover1 = cv2.imread('train.png',0)
 # cover2 = cv2.imread('XMen500kb.png',0)
 # cover1_name = "X-MEN #1"
-orb = cv2.ORB_create()
+orb = cv2.ORB_create(nfeatures=1000)
 bf = cv2.BFMatcher()
 
 image_info = []
