@@ -39,7 +39,7 @@ class VideoThread(QThread):
                 kp, cap_desc = orb.detectAndCompute(cv_img, None)
                 for cover in data['cover_info']:
                     matches = bf.knnMatch(cap_desc, cover['desc'], k=2)
-                    good_matches = [m for m,n in matches if m.distance < .7*n.distance]
+                    good_matches = [m for m,n in matches if m.distance < .75*n.distance]
                     if len(good_matches) > 12: 
                         a.textLabel.setText('✅ ' + cover['name'])
 
